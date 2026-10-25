@@ -1,12 +1,14 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-require('dotenv').config();
+import express from 'express';
+import mongoose from 'mongoose';
+import cors from 'cors';
+import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
+import dotenv from 'dotenv';
 
-const Task = require('./models/Task');
-const User = require('./models/User');
+dotenv.config();
+
+import Task from './models/Task.js';
+import User from './models/User.js';
 
 const app = express();
 app.use(cors());
